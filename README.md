@@ -1,3 +1,22 @@
+UNIRENTBD.COM
+
+Now You can find your Apartment easily
+
+**Description:** 
+unirentbd is an website. Where you will be able to find rent houses, You can also post here for your Apartment.
+
+**Features**
+1. profile:
+   After opening account the user can see his profile.
+
+2.Post add:
+  User can post for his Apartment.
+
+3.Contact:
+  Visitors can feedback
+
+4.Social Media links in the site
+
 **How to set up the code**
 
 1. Install [Node.js](https://nodejs.org/en/download/) and [MongoDB](https://www.mongodb.com/download-center?jmp=nav) on your computer
