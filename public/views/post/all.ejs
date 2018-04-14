@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Find Apartment</title>
+    <link rel="icon" type="image/png" href="/img/icon.png" />
+    
+    <!-- social media-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" crossorigin="anonymous">
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/profile">Profile</a>
+      <a class="navbar-brand" href="/index">UniRent BD</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/index">Our Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/index">Contact Us</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+</nav>
+
+<div  id="intro2" class="view hm-black-strong">
+  <div class="container-fluid full-bg-img d-flex align-items-center justify-content-center">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 text-center" id="adjust1">
+        <h2 class="display-3 font-bold text-white mb-2">
+          UniRent
+        </h2>
+        <hr class="hr-light">
+
+        <a class="btn btn-warning btnpad postad" href="/posts/new" role="button">Post Ad</a>
+
+        <h4 class="display-4 text-white my-4">Find Your Apartment Easily</h4>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</header>
+
+
+<main class="mt-5">
+  <div class="container">
+
+
+<!-- search bar--
+    <div class="left-search">
+
+      <h4 > House near universities:</h4>
+      <br><br>
+
+      <div class="list-group" id="universityname">
+        <a href="#" class="list-group-item">IUB</a>
+        <a href="#" class="list-group-item">NSU</a>
+        <a href="#" class="list-group-item">AIUB</a>
+        <a href="#" class="list-group-item">DIU</a>
+        <a href="#" class="list-group-item">IUT</a>
+        <a href="#" class="list-group-item">MIST</a>
+        <a href="#" class="list-group-item">NU</a>
+        <a href="#" class="list-group-item">IUBAT</a>
+        <a href="#" class="list-group-item">BUBT</a>
+        <a href="#" class="list-group-item">BUP</a>
+        <a href="#" class="list-group-item">AUB</a>
+        <a href="#" class="list-group-item">EWU</a>
+
+      </div>
+    </div>
+<!-- add-->
+            <h4 class="display-4 text-black my-4 align-items-center justify-content-cente">Previous Posts</h4>
+            <hr>
+    <div class="right-adds">
+      <!-- images-->
+
+          <!--cards post-->
+          
+          <% console.log(posts) %>
+          <div class="card-deck">
+          
+  <% for(var i=0; i<posts.length; i++) { %>
+    <div class="card col-md-4">
+    
+          <img class="card-img-top img-fluid" src="/img/h1.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title"><%=   posts[i].houseName %></h5>
+          <p class="card-text">  Owner : <%= posts[i].fullName%></p>
+          <p class="card-text">  Rent : <%= posts[i].rentCost%></p>
+          <p class="card-text">  Address : <%= posts[i].address%>, <%= posts[i].city%>, Zip : <%= posts[i].zip%></p>
+          <p class="card-text">  Floors : <%= posts[i].floor%>, Rooms : <%= posts[i].room%></p>
+          <p class="card-text">  Email : <%= posts[i].email%></p>
+          <p class="card-text">  Phone : <%= posts[i].PhoneNumber%></p>
+          
+          <a href=" <%= posts[i].photo%>">Link To photo</a>
+          
+          <p class="card-text"><small class="text-muted">Last updated <%= posts[i].created%></small></p>
+          </div>
+          
+      </div>
+    <% } %>
+            
+          
+          
+  <!--        
+          </div>
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h2.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 2</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          
+          
+          </div>
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h3.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 3</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          
+          
+          </div>
+
+          <div class="card-deck">
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h4.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 4</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          
+          
+          </div>
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h5.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 5</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          </div>
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h6.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 6</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+-->
+          
+
+
+<!--cards customer-->
+
+    </div>
+
+  </div>
+<!--Footer-->
+<footer class="page-footer font-small indigo pt-0">
+
+    <!--Footer Links-->
+    <div class="container">
+
+        <!--First row-->
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-12 py-5">
+                  <h4> Get connected with us on social networks!</h4>
+                <div class="mb-5 flex-center">
+
+                    <!--Facebook-->
+                    <a href="https://www.facebook.com/bijoy1915?hc_ref=ARS_avid0p7nfw3kgGZXJGHzsm3BIVUkfCtQvGz8ztaPXUoJvNK0CxiDmyKX5bhhaew" class="fa fa-facebook" >
+                        
+                    </a>
+                    <!--Twitter-->
+                    <a href="#" class="fa fa-twitter">
+                        
+                    </a>
+                    
+                    <!--Instagram-->
+                    <a href="#" class="fa fa-instagram">
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            <!--/First column-->
+        </div>
+        <!--/First row-->
+    </div>
+    <!--/Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://unirentbd-shamahoque.c9users.io/index"> UnirentBd.com </a>
+    </div>
+    <!--/Copyright-->
+
+</footer>
+<!--/Footer-->
+
+
+
+</main>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

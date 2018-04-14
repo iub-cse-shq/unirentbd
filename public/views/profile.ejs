@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Profile</title>
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    
+    <!-- social media-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css" crossorigin="anonymous">
+  </head>
+  <body>
+
+      <section>
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+          <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/index">UniRent BD</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/index">Our Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/index">Our Customers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="/index">Contact Us</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+      </nav>
+      </section>
+
+      <section>
+        <div class="container">
+    	       <div class="row">
+               <div class="col-md-4 ">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="box box-info">
+                <br><br><br><br>
+                <div class="box-body">
+                         <div class="col-sm-12" col-md-4>
+                         <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive">
+
+                    <input id="profile-image-upload" class="hidden" type="file">
+                      <div style="color:#999;" >click here to change profile image</div>
+                   <!--Upload Image Js And Css-->
+                        </div>
+
+                  <br>
+
+                  <!-- /input-group -->
+                </div>
+                <div class="col-sm-6">
+                <h4 style="color:#00b1b1;"><%=   request.user.firstName %> <%=   request.user.lastName %></h4>
+                </div>
+                <div class="clearfix"></div>
+                <hr style="margin:5px 0 5px 0;">
+
+
+                <div class="col-sm-5 col-xs-6 tital " >First Name:</div>
+                    <div class="col-sm-7 col-xs-6 "><%=   request.user.firstName %></div>
+                    <div class="clearfix"></div>
+                    <div class="bot-border"></div>
+
+                    <div class="col-sm-5 col-xs-6 tital " >Last Name:</div><div class="col-sm-7"> <%=   request.user.lastName %></div>
+                      <div class="clearfix"></div>
+                    <div class="bot-border"></div>
+
+                      <div class="clearfix"></div>
+                    <div class="bot-border"></div>
+
+                    <div class="col-sm-5 col-xs-6 tital " >Date Of Birth:</div><div class="col-sm-7"><%=   request.user.day %>-<%=   request.user.month %>-<%=   request.user.year %></div>
+
+                      <div class="clearfix"></div>
+                    <div class="bot-border"></div>
+
+                    <div class="col-sm-5 col-xs-6 tital " >Adress</div><div class="col-sm-7"><%=   request.user.address %>, zip: <%=   request.user.zip %>, <%=   request.user.city %> </div>
+
+                     <div class="clearfix"></div>
+                    <div class="bot-border"></div>
+
+                    <div class="col-sm-5 col-xs-6 tital " >Email</div><div class="col-sm-7"><%=   request.user.email %></div>
+
+                     <div class="clearfix"></div>
+                    <div class="bot-border"></div>
+                    
+                    <div class="col-sm-5 col-xs-6 tital " >Phone</div><div class="col-sm-7"><%=   request.user.contact_number %></div>
+
+                     <div class="clearfix"></div>
+                    <div class="bot-border"></div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+
+          </div>
+
+
+      </div>
+      </div>
+  </div>
+          <div class="col-md-8">
+            <br><br><br><br>
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-warning btnpad postad" href="/post" role="button"> Post Ad</a>
+            <br><br>
+            <h3 class="display-6 font-italic text-black mb-2 align-items-center">My Posts</h3>
+            
+            <!-- images-->
+
+          <!--cards post-->
+            
+          <div class="card-deck">
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h1.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 1</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          </div>
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h2.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 2</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          </div>
+          <div class="card">
+          <img class="card-img-top img-fluid" src="/img/h3.jpg" alt="Card image cap" id="ig" style="width:100%">
+          <div class="card-body">
+          <h5 class="card-title">house 3</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          </div>
+
+          
+          
+         
+
+
+<!--cards customer-->
+          </div>
+
+
+     </div>
+  </div>
+      </section>
+
+<!--Footer-->
+<footer class="page-footer font-small indigo pt-0">
+
+    <!--Footer Links-->
+    <div class="container">
+
+        <!--First row-->
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-12 py-5">
+                  <h4> Get connected with us on social networks!</h4>
+                <div class="mb-5 flex-center">
+
+                    <!--Facebook-->
+                    <a href="https://www.facebook.com/bijoy1915?hc_ref=ARS_avid0p7nfw3kgGZXJGHzsm3BIVUkfCtQvGz8ztaPXUoJvNK0CxiDmyKX5bhhaew" class="fa fa-facebook" >
+                        
+                    </a>
+                    <!--Twitter-->
+                    <a href="#" class="fa fa-twitter">
+                        
+                    </a>
+                    
+                    <!--Instagram-->
+                    <a href="#" class="fa fa-instagram">
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            <!--/First column-->
+        </div>
+        <!--/First row-->
+    </div>
+    <!--/Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://unirentbd-shamahoque.c9users.io/index"> UnirentBd.com </a>
+    </div>
+    <!--/Copyright-->
+
+</footer>
+<!--/Footer-->
+
+
+
+
+  </body>
+</html>
